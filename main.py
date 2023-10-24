@@ -9,11 +9,11 @@ def encode(password):
 
 # Decoder Function
 def decode(encoded_password):
-    decoded_password = ""
-    for digit in encoded_password:
-        original_digit = str((int(digit) - 3) % 10)
-        decoded_password += original_digit
-    return decoded_password
+    res = ''
+    for i in encoded_password:
+        temp = (int(i) - 3) % 10
+        res += str(temp)
+    return res
 
 
 # Main Program
